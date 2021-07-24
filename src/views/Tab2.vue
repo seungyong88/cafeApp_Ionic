@@ -13,7 +13,6 @@
         </ion-fab-button>
       </ion-fab>
     </ion-content>
-
   </ion-page>
 </template>
 
@@ -21,14 +20,12 @@
 // import { IonPage, IonHeader, IonToolbar, IonTitle, IonContent } from '@ionic/vue';
 
 import { camera, trash, close } from 'ionicons/icons';
-import { IonPage, IonHeader, IonFab, IonFabButton, IonIcon, IonToolbar, IonTitle, IonContent  } from '@ionic/vue';
-import { usePhotoGallery } from '@/composables/usePhotoGallery';
+import { IonIcon, IonPage, IonHeader, IonToolbar, IonTitle, IonContent, IonFab, IonFabButton, IonGrid, IonRow, IonCol, IonImg } from '@ionic/vue';
+// import { usePhotoGallery } from '@/composables/usePhotoGallery';
 
-// IonGrid, IonRow, IonCol, IonImg
-// IonGrid, IonRow, IonCol, IonImg
 export default  {
   name: 'Tab2',
-  components: { IonPage, IonHeader, IonFab, IonFabButton, IonIcon, IonToolbar, IonTitle, IonContent },
+  components: { IonIcon, IonPage, IonHeader, IonToolbar, IonTitle, IonContent, IonFab, IonFabButton, IonGrid, IonRow, IonCol, IonImg  },
   setup() {
     return {
       camera, trash, close
