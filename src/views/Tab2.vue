@@ -10,7 +10,7 @@
       <ion-grid>
         <ion-row>
           <ion-col size="6" v-for="photo in photos" :key="photo">
-            <ion-img :src="photo.webviewPath"></ion-img>
+            <ion-img :src="photo.webviewPath" @click="showActionSheet(photo)"></ion-img>
           </ion-col>
         </ion-row>
       </ion-grid>
@@ -35,9 +35,9 @@ export default  {
   name: 'Tab2',
   components: { IonIcon, IonPage, IonHeader, IonToolbar, IonTitle, IonContent, IonFab, IonFabButton, IonGrid, IonRow, IonCol, IonImg  },
   setup() {
-    const { takePhoto, photos } = usePhotoGallery();
+    const { takePhoto, photos, showActionSheet } = usePhotoGallery();
     return {
-      camera, trash, close, takePhoto, photos
+      camera, trash, close, takePhoto, photos, showActionSheet
     }
   }
 }
